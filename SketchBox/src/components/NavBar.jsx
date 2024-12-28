@@ -74,13 +74,7 @@ const NavBar = () => {
           <NavLink onClick={()=>setVisible(false)} to='/items' className='py-5 text-center pl-6 border'>ITEMS</NavLink>
           <NavLink onClick={()=>setVisible(false)} to='/about' className='py-5 text-center pl-6 border'>ABOUT</NavLink>
           <NavLink onClick={()=>setVisible(false)} to='/contact' className='py-5 text-center pl-6 border'>CONTACT</NavLink>
-
-
-
-
-
-        </div>
-
+          </div>
       </div>
     </div>
   );

@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Outfit:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+    font-family: "Outfit", serif;
+}
+.agu-display {
+    font-family: "Agu Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 0;
+     
+  }
 
 a.active hr{
     display: block;
 }
+

@@ -64,12 +64,21 @@ const NavBar = () => {
       </div>
 
       {/* sidebar menu for small screens  */}
-      <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? `w-full` : `w-0`}`}>
+      <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
         <div className="flex flex-col text-gray-700">
-          <div onClick={()=>setVisible(false)} className="flex items-center gap-4 p-3">
+          <div onClick={()=>setVisible(false)} className="flex items-center gap-4 p-3 cursor-pointer">
             <img src={assets.dropdown_icon} className="h-4 rotate-180" alt="" />
-            <p>Back</p>
+            <p className="py-5">Back</p>
           </div>
+          <NavLink onClick={()=>setVisible(false)} to='/' className='py-5 text-center pl-6 border'>HOME</NavLink>
+          <NavLink onClick={()=>setVisible(false)} to='/items' className='py-5 text-center pl-6 border'>ITEMS</NavLink>
+          <NavLink onClick={()=>setVisible(false)} to='/about' className='py-5 text-center pl-6 border'>ABOUT</NavLink>
+          <NavLink onClick={()=>setVisible(false)} to='/contact' className='py-5 text-center pl-6 border'>CONTACT</NavLink>
+
+
+
+
+
         </div>
 
       </div>

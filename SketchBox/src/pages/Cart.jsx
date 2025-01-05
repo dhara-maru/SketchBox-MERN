@@ -4,6 +4,7 @@ import { useState } from "react";
 import Title from "../components/Title";
 import Product from "./Product";
 import { assets, products } from '../assets/assets'
+import CartTotal from "../components/CartTotal";
 
 
 const Cart = () => {
@@ -64,7 +65,7 @@ const Cart = () => {
                   </div>
 
                    </div>
-                   <input type="number" className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1 " min={1} defaultValue={item.quantity} />
+                   <input onChange={(e)=> e.target.value === '' || e.target.value === '0' ? null : updateQty(item._id, item.size, Number(e.target.value))} type="number" className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1 " min={1} defaultValue={item.quantity} />
                
                 <img onClick={()=>updateQty(item._id, item.size, 0)} src={assets.bin_icon} className="w-4 cursor-pointer mr-4 sm:w-5" alt="" />
               </div>
@@ -74,6 +75,15 @@ const Cart = () => {
           <p>Your cart is empty.</p>
         )}
       </div>
+
+
+      <div className="flex justify-end my-20">
+        <div className="w-full sm:w-[450px]">
+          <CartTotal/>
+        </div>
+      </div>
+
+
     </div>
   );
 };

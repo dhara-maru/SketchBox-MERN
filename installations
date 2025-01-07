@@ -2,3 +2,6 @@ npm install react-router-dom react-toastify
 
 
 npm i cors dotenv express jsonwebtoken mongoose multer nodemonrazorpay stripe validator cloudinary bcrypt
+
+
+mongo cluster connection string : mongodb+srv://dharaMERN:gowmongodb46@cluster0.xhmws.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

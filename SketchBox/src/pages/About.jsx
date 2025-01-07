@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/assets'
 import NewsLetterBox from '../components/NewsLetter'
+import OurPolicy from '../components/OurPolicy'
 
 const About = () => {
   return (
@@ -39,7 +40,6 @@ const About = () => {
     <p className='text-gray-600'>Our dedicated team is here to provide personalized support, ensuring your satisfaction with every order.</p>
   </div>
 </div>
-
 
 {/* newsletter  */}
 <NewsLetterBox></NewsLetterBox>

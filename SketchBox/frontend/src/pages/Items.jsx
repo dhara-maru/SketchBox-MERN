@@ -86,84 +86,6 @@ const Items = () => {
  
 
   return (
-//     <div className='flex flex-col sm:felx-row gap-1 sm:gap-10 pt-10 border-t'>
-//       {/* filter option  */}
-// <div className="min-w-60">
-//   <p onClick={()=>setShowFilter(!showFilter)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>FILTERS
-//     <img src={assets.dropdown_icon} className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : '' }` } alt="" />
-//   </p>
-//   {/* category filter  */}
-//   <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'}`}>
-//    <p className="mb-3 text-sm font-medium">CATEGORIES</p>
-//     <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
-//     <p className="flex gap-2">
-//       <input type="checkbox" className='w-3' value={'Men'} onChange={toggleCategory}/> School
-//     </p>
-//     <p className="flex gap-2">
-//       <input type="checkbox" className='w-3' value={'Women'} onChange={toggleCategory} /> Office
-//     </p>
-//     <p className="flex gap-2">
-//       <input type="checkbox" className='w-3' value={'Kids'} onChange={toggleCategory} /> Art & Craft
-//     </p>
-//   </div>
-//   </div>
-// </div>
-
-// {/* sub categories  */}
-
-// <div className={`border border-gray-300 pl-5 py-3 my-0 ${showFilter ? '' : 'hidden'}`}>
-//    <p className="mb-3 text-sm font-medium">TYPE</p>
-//     <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
-//     <p className="flex gap-2">
-//       <input type="checkbox" className='w-3' value={'Topwear'} onChange={toggleSubCategory}/> Accessories
-//     </p>
-//     <p className="flex gap-2">
-//       <input type="checkbox" className='w-3' value={'Bottomwear'} onChange={toggleSubCategory}/> Art Supplies
-//     </p>
-//     <p className="flex gap-2">
-//       <input type="checkbox" className='w-3' value={'Winterwear'} onChange={toggleSubCategory}/> Stationery
-//     </p>
-//   </div>
-//   </div>
-
-
-
-// {/* right side  */}
-
-// <div className='flex-1'>
-//   <div className="flex justify-between text-base sm:text-2xl mb-4">
-//     <Title text1={'ALL'} text2={'ITEMS'}/>
-
-//     {/* product sort  */}
-//     <select name="" onChange={(e) => setSortType(e.target.value)} id="" className='border-2 border-gray-300 text-sm px-2'>
-//       <option value="relavent">Sort by : Relavent</option>
-//       <option value="low-high">Sort by : Low to High</option>
-//       <option value="high-low">Sort by : High to Low</option>
-//     </select>
-//   </div>
-
-//   {/* map products  */}
-//   <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
-//     {
-//       filterProducts.map((item, index)=>(
-//         <ProductItem
-//         key={index}
-//         id={item._id}
-//         name={item.name}
-//         image={item.image}
-//         price={item.price}
-//       />
-//       ))
-//     }
-//   </div>
-
-// </div>
-
-
-
-
-//     </div>
-
 
 
 <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 pt-10 border-t">
@@ -190,16 +112,7 @@ const Items = () => {
         <input
           type="checkbox"
           className="w-3"
-          value="Men"
-          onChange={toggleCategory}
-        />
-        School
-      </p>
-      <p className="flex gap-2">
-        <input
-          type="checkbox"
-          className="w-3"
-          value="Women"
+          value="Office"
           onChange={toggleCategory}
         />
         Office
@@ -208,7 +121,16 @@ const Items = () => {
         <input
           type="checkbox"
           className="w-3"
-          value="Kids"
+          value="School"
+          onChange={toggleCategory}
+        />
+        School
+      </p>
+      <p className="flex gap-2">
+        <input
+          type="checkbox"
+          className="w-3"
+          value="Art"
           onChange={toggleCategory}
         />
         Art & Craft
@@ -226,7 +148,16 @@ const Items = () => {
         <input
           type="checkbox"
           className="w-3"
-          value="Topwear"
+          value="Stationery"
+          onChange={toggleSubCategory}
+        />
+        Stationery
+      </p>
+      <p className="flex gap-2">
+        <input
+          type="checkbox"
+          className="w-3"
+          value="Accessories"
           onChange={toggleSubCategory}
         />
         Accessories
@@ -235,19 +166,10 @@ const Items = () => {
         <input
           type="checkbox"
           className="w-3"
-          value="Bottomwear"
+          value="Art Supplies"
           onChange={toggleSubCategory}
         />
         Art Supplies
-      </p>
-      <p className="flex gap-2">
-        <input
-          type="checkbox"
-          className="w-3"
-          value="Winterwear"
-          onChange={toggleSubCategory}
-        />
-        Stationery
       </p>
     </div>
   </div>
